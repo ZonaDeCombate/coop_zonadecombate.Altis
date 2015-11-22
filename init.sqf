@@ -1,14 +1,12 @@
-call ZC_fnc_initZCrespawn;
 execVM "R3F_LOG\init.sqf";
+call ZC_fnc_initZCrespawn;
+CHHQ_showMarkers = true;
 
 ["init",["WEST","LOP_ChDKZ"]] call SCI_fnc_civilianInteraction;
 
 [] execVM "staticData.sqf";
 //------------------------------//
 
-[] spawn {
-  while {not isnull eng2} do { "aegisMRK" setmarkerpos getpos eng2; sleep 0.5; };
-};
 
 //HandlessClient Inicialização
 
