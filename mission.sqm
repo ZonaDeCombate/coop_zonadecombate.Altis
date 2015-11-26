@@ -2219,7 +2219,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={18404.234,1.4352539,8106.5107};
+					position[]={18401.143,0.90579587,8095.5244};
 					azimut=632.034;
 					special="NONE";
 					id=77;
@@ -4510,7 +4510,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=53;
+		items=55;
 		class Item0
 		{
 			position[]={17231.654,0.17123935,7631.4868};
@@ -4525,8 +4525,8 @@ class Mission
 		};
 		class Item1
 		{
-			position[]={16953.912,0.050304882,7696.3833};
-			name="CVN-68";
+			position[]={17225.697,0.019122526,7634.7627};
+			name="mrk_nimitz";
 			text="USS NIMITZ";
 			type="b_naval";
 			a=2;
@@ -4971,8 +4971,8 @@ class Mission
 		};
 		class Item44
 		{
-			position[]={17911.693,0.11796551,8093.8672};
-			name="CVN-68_1";
+			position[]={18259.559,0.080532052,8092.4185};
+			name="mrk_wasp";
 			text="USS Wasp";
 			type="b_naval";
 			a=2;
@@ -5038,6 +5038,20 @@ class Mission
 			name="hq_1";
 			text="Teleportar para o HQ";
 			type="Empty";
+		};
+		class Item53
+		{
+			position[]={18397.209,1.6766357,8163.1182};
+			name="mrk_hospital";
+			text=" Hospital";
+			type="b_med";
+		};
+		class Item54
+		{
+			position[]={18438.83,6.3249974,8154.7646};
+			name="mrk_logistics";
+			text=" Logística";
+			type="b_service";
 		};
 	};
 	class Sensors

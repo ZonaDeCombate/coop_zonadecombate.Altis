@@ -1,16 +1,24 @@
 if (isServer) then {
 
-// Ativa o sistema de respawn na bandeira
+  // Ativa o sistema de respawn na bandeira
+  _locations = [
+  // Para adicionar novos markers, basta criar mais uma entrada no array. Exemplo:
+  // ["Nome para aparecer na Bandeira","nome_do_marker", altura]
+  ["USS Wasp","mrk_wasp", 16.8],
+  ["USS NIMITZ","mrk_nimitz",17.21],
+  ["Hospital","mrk_hospital",0],
+  ["Logistica","mrk_logistics",0]
 
-  _locations = [["USS Wasp","cctMRK"],["USS NIMITZ","aegisMRK"],["Hospital","sealsMRK"],["Logistica","goteMRK"]];
+  ];
 
 
   // Coloca os addAction para cada localizacao
   {
-    private ["_locationName","_locationPos"];
+    private ["_locationName","_locationPos","_locationHeight"];
 
     _locationName = _x select 0;
     _locationPos = _x select 1;
+    _locationHeight = _x select 2;
     [
       [
         zcRespawnObject,
@@ -22,7 +30,7 @@ if (isServer) then {
           [_this select 3] call ZC_fnc_teleportPlayer;
 
 
-        },_locationPos,6,false,true,"","_this distance _target < 5"
+        },[_locationPos,_locationHeight],6,false,true,"","_this distance _target < 5"
         ]
       ],
       "addAction",
