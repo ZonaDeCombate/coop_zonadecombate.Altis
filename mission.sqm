@@ -487,7 +487,7 @@ class Mission
 				class Item0
 				{
 					position[]={17246.123,0.03151159,7648.1973};
-					azimut=21.543695;
+					azimut=21.543699;
 					class args
 					{
 						items=2;
@@ -499,7 +499,7 @@ class Mission
 						};
 						class Item1
 						{
-							value="17.5";
+							value="17.21";
 							parentCls="TTT_ModuleNimitzOnShip";
 							typeName="Height";
 						};
@@ -4943,7 +4943,7 @@ class Mission
 		};
 		class Item41
 		{
-			position[]={18338.988,0.033393838,8120.001};
+			position[]={18338.988,-9.4686911e-005,8120.001};
 			name="elevator1_2";
 			text="Elevador (Entre 9-18m)";
 			type="Empty";
