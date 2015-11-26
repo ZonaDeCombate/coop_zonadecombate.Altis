@@ -11,6 +11,14 @@ if (isServer) then {
 
   ];
 
+  // Para adicionar novas flags, basta colocar o nome da mesma no array abaixo.
+  _flags = [
+    // nome_da_flag
+    zcRespawnObject,
+    zcRespawnObject2,
+    zcRespawnObject3
+  ];
+
 
   // Coloca os addAction para cada localizacao
   {
@@ -19,25 +27,30 @@ if (isServer) then {
     _locationName = _x select 0;
     _locationPos = _x select 1;
     _locationHeight = _x select 2;
-    [
+
+    {
       [
-        zcRespawnObject,
         [
-          format ["<t color='#FF0000'>%1</t>",_locationName],
-          {
+          _x,
+          [
+            format ["<t color='#FF0000'>%1</t>",_locationName],
+            {
 
 
-          [_this select 3] call ZC_fnc_teleportPlayer;
+            [_this select 3] call ZC_fnc_teleportPlayer;
 
 
-        },[_locationPos,_locationHeight],6,false,true,"","_this distance _target < 5"
-        ]
-      ],
-      "addAction",
-      true,
-      true,
-      false
-    ] call BIS_fnc_MP;
+          },[_locationPos,_locationHeight],6,false,true,"","_this distance _target < 5"
+          ]
+        ],
+        "addAction",
+        true,
+        true,
+        false
+      ] call BIS_fnc_MP;
+    } forEach _flags;
+
+
   } forEach _locations;
 
 };

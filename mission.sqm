@@ -2342,7 +2342,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=173;
+		items=175;
 		class Item0
 		{
 			position[]={17267.66,-0.014669485,7627.0298};
@@ -4506,6 +4506,24 @@ class Mission
 			vehicle="B_Slingload_01_Medevac_F";
 			skill=0.60000002;
 			init="null = [this, west] execVM ""CHHQ.sqf""";
+		};
+		class Item173
+		{
+			position[]={18399.641,0.75540525,8096.6274};
+			id=253;
+			side="EMPTY";
+			vehicle="Flag_NATO_F";
+			skill=0.60000002;
+			text="zcRespawnObject2";
+		};
+		class Item174
+		{
+			position[]={18401.969,1.0242407,8096.8984};
+			id=254;
+			side="EMPTY";
+			vehicle="Flag_NATO_F";
+			skill=0.60000002;
+			text="zcRespawnObject3";
 		};
 	};
 	class Markers
